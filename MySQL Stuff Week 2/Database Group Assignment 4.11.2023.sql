@@ -14,6 +14,7 @@ CREATE TABLE posts (
     title  VARCHAR(40) NOT NULL,
     username    CHAR(40) NOT NULL,
     rating ENUM('1','2','3','4','5'),
+    postInfo TEXT NOT NULL,
     author_id INT NOT NULL,
     PRIMARY KEY (author_id),
 	FOREIGN KEY (author_id) REFERENCES users(account_id) ON UPDATE CASCADE ON DELETE SET NULL
