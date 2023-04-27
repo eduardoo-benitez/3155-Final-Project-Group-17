@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS FinalProjectDB;
+
+CREATE DATABASE IF NOT EXISTS FinalProjectDB;
+
+USE FinalProjectDb;
+
+CREATE TABLE users (
+
+	email VARCHAR(20) NOT NULL,
+    pass VARCHAR(20) NOT NULL,
+    username VARCHAR(20) NOT NULL,
+    
+    account_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
+);
+
+CREATE TABLE posts (
+	
+    title VARCHAR(20) NOT NULL,
+    body BLOB NOT NULL,
+    author INT NOT NULL, FOREIGN KEY(author) REFERENCES users(account_id),
+    
+    post_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
+);
