@@ -5,18 +5,36 @@
   </head>
   <body>
     <h1>Profile</h1>
-    <form>
-        <a href="allPosts.html">All Posts</a><br><br> <!--Find html/css to make this a header bar-->
+    <form>        
+        <a href="create">Create</a></p>
+        <a href="/all">All Posts</a> <!--Find html/css to make this a header bar-->
+        <br><br> 
         <label for="search">Search:</label>
-        <input type="search"><br><br><br>
+        <input type="search">
+        <br><br><br>
 
         <source media="(min-width:650px)" srcset=""> <!--Put profile image here-->
-        <p>Profile name goes Here</p><br>
+        <p>{{user.username}}</p>
+        <br>
 
-        <p>Insert Post Title Here &emsp; Insert Post Author Here &emsp;
-        <a href="post.html">Expand</a></p>
+        <table>
+          <tbody>
+            {% for post in posts %}
+              <tr>
+                <td>
+                  {{post.title}}
+                </td>
+                <td>
+                  {{post.text}}
+                </td>
+                <td>
+                  <a href="/post/{{post.post_id}}">Expand</a></p>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
     </form>
   </body>
-  
 </html>
 

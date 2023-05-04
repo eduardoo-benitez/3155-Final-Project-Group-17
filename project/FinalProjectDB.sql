@@ -2,22 +2,24 @@ DROP DATABASE IF EXISTS FinalProjectDB;
 
 CREATE DATABASE IF NOT EXISTS FinalProjectDB;
 
-USE FinalProjectDb;
+USE FinalProjectDB;
 
 CREATE TABLE users (
 
 	email VARCHAR(20) NOT NULL,
-    pass VARCHAR(20) NOT NULL,
-    username VARCHAR(20) NOT NULL,
+    passw VARCHAR(20) NOT NULL,
+    username VARCHAR(20) UNIQUE NOT NULL,
     
+    activeUser BOOLEAN NOT NULL,
+
     account_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE posts (
 	
     title VARCHAR(20) NOT NULL,
-    body BLOB NOT NULL,
-    author INT NOT NULL, FOREIGN KEY(author) REFERENCES users(account_id),
+    body TEXT NOT NULL,
+    author VARCHAR(20) NOT NULL, FOREIGN KEY(author) REFERENCES users(username),
     
     post_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
 );

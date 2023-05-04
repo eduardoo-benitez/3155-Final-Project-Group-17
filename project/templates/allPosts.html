@@ -6,12 +6,29 @@
   <body>
     <h1>All Posts</h1>
     <form>
-      <a href="profile.html">Profile</a><br><br> <!--Put link to profile page once made-->
+      <a href="/profile">Profile</a>
+      <br><br>
       <label for="search">Search:</label>
-      <input type="search"><br><br><br>
+      <input type="search">
+      <br><br><br>
 
-      <p>Insert Post Title Here &emsp; Insert Post Author Here &emsp;
-      <a href="post.html">Expand</a></p>
+        <table>
+          <tbody>
+            {% for post in posts %}
+              <tr>
+                <td>
+                  {{post.title}}
+                </td>
+                <td>
+                  {{post.author}}
+                </td>
+                <td>
+                  <a href="/post/{{post.post_id}}">Expand</a></p>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
     </form>
   </body>
 </html>
