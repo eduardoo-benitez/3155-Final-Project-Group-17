@@ -5,7 +5,6 @@ from src.repositories.WebsiteRepository import website_repository_singleton
 from src.models import db
 
 app = Flask(__name__)
-app.secret_key = "testtesttest"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = \
     'mysql://root:Ed200341BenSQLMy#@localhost:3306/FinalProjectDB'
