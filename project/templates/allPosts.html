@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
     <title>All Posts</title>
   </head>
   <body>
-    <h1>All Posts</h1>
+    <div>
+    <h1 style="background-color: #2266ff;height: 10%;position: fixed;width: 100%;top: -2.2%;left: 0%;"></h1>
+    <h2 style= "background-color: #44ccff;height: 6%;position: fixed;top: 6.9%;width: 100%;left: 0%;font-family: 'Alata';font-size:230% ;text-align: center;letter-spacing: 200%;">All Posts</h2>
+  </div>
     <form>
-      <a href="profile.html">Profile</a><br><br> <!--Put link to profile page once made-->
-      <label for="search">Search:</label>
-      <input type="search"><br><br><br>
+        <a href="profile.html" style="position: fixed;top: 12%;background-color: #99eeff;width: 5%;text-align: center;height: 2.5%;font-size: 100%; font-family: 'Alata';left: 90%;">Profile</a><br><br> <!--Find html/css to make this a header bar-->
+        <label for="filter" style="position: fixed;top: 11.2%;font-family: 'Alata';left: 5%;font-size: 150%;">Filter:</label>
+        <select name="filter" id="filter" style="position: fixed;top: 11.2%;left: 9%; border-width: 3px; font-size: 18px; font-family: Alata" required>
+          <option value="Freshman">Freshman</option>
+          <option value="Softmore">Softmore</option>
+          <option value="Junior">Junior</option>
+          <option value="Senior">Senior</option>
+        </select>
+        <input type="submit" value="Submit" style="background-color: #99eeff;border: none;height: 2.5%; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;left:16%;top: 12%;"><br><br><br>
 
-      <p>Insert Post Title Here &emsp; Insert Post Author Here &emsp;
-      <a href="post.html">Expand</a></p>
+
+
+        <div style="border-color: black;border-style: solid;width: 97%;position: fixed;left: 1%;top: 20%;">
+        <p style="font-family: 'Alata';" id="postName">Insert Post Title Here &nbsp; &nbsp;
+        <a href="post.html" id="postIdLink">Expand</a></p>
+      </div>
     </form>
   </body>
+  
 </html>

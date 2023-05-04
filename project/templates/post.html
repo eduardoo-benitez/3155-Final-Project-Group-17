@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>View Post</title>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
+    <title>Edit Post</title>
+    <style>
+      h1{
+        background-color: #2266ff;
+        height: 10%;
+        position: fixed;
+        width: 100%;
+        
+        top: -2.2%;
+      }
+      h2{
+        background-color: #44ccff;
+        height: 7%;
+        position: fixed;
+        width: 100%;
+        top: 5.9%;
+        font-size: 48px;
+        font-weight: 600;
+        font-style: normal;
+        font-family: 'Alata';
+        text-align: center;
+        letter-spacing: 9px
+      }
+      h3{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.6%;
+        position: relative;
+        left: 1750px;
+        bottom: 150px;
+      }
+      a{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        letter-spacing: 1px
+      }
+      h4{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.7%;
+        position: relative;
+        left: 1750px;
+        bottom: 20px;
+      }
+      body{
+        border-width: 50px;
+        border-color: grey;
+      }
+      h5{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 550;
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 25px;
+      }
+      
+      
+    </style>
   </head>
   <body>
-    <h1>Post Title</h1>
-    <p>Post content goes here...</p>
-    <div>
-      <button onclick="like()">Like</button>
-      <span id="likes">0</span>
-      <button onclick="dislike()">Dislike</button>
-      <span id="dislikes">0</span>
-    </div>
+    <h1></h1>
+    <h2>View Post</h2>
+    <form>
+      <h3>&nbsp;<a href="profile.html">Profile</a></h3><br>
+      <label for="PostTitle" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="PostTitle" name="PostTitle" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled></textarea>
+      <br>
+      <br>
+      <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
+    <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;"></h6>
+      <br>
+      <br>
+      <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
+      <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;"></textarea>
+      <a href="allPosts.html"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
+      <div>
+        <button onclick="like()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:13%;top: 90%;">Likes</button>
+        <span id="likes" style="font-family: Alata;font-size: 125%;position: fixed;left: 88%;top: 90%;">0</span>
+        <button onclick="dislike()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:5%;top: 90%;">Dislikes</button>
+        <span id="dislikes" style="font-family: Alata;font-size: 125%;position: fixed;left: 96%;top: 90%;">0</span>
+      </div>
+    </form>
   </body>
+  
 </html>
