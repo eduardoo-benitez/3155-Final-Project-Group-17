@@ -70,10 +70,10 @@
       <h1 style="background-color: #2266ff;height: 10%;position: fixed;width: 100%;top: -2.2%;left: 0%;"></h1>
       <h2 style= "background-color: #44ccff;height: 6%;position: fixed;top: 6.9%;width: 100%;left: 0%;font-family: 'Alata';font-size:230% ;text-align: center;letter-spacing: 200%;">Create Post</h2>
     </div>
-    <form>
-      <h3>&nbsp;<a href="profile.html">Profile</a></h3><br>
-      <label for="PostTitle" style="position:fixed; top: 20%; left:3%; font-family: Alata; font-size: 30px;">Title:</label>
-      <textarea id="PostTitle" name="PostTitle" required style="border-width: 3px; font-size: 18px; top:25%; position:fixed;left: 3%;" rows="1" cols="176"></textarea>
+    <form action = "/profile/create" method = post>
+      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      <label for="title" style="position:fixed; top: 20%; left:3%; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="title" name="title" required style="border-width: 3px; font-size: 18px; top:25%; position:fixed;left: 3%;" rows="1" cols="176"></textarea>
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:3%; top: 30%;">Choose your student classification:</label>

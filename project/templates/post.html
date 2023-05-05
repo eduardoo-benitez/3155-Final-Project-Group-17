@@ -69,17 +69,23 @@
     <h1></h1>
     <h2>View Post</h2>
     <form>
-      <h3>&nbsp;<a href="profile.html">Profile</a></h3><br>
-      <label for="PostTitle" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
-      <textarea id="PostTitle" name="PostTitle" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled></textarea>
+      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      {% if post.author == active.username %}
+        <h3>&nbsp;<a href="/post/{{post.post_id}}/edit">Edit post</a></h3><br><br><br>
+      {% endif %}
+      <label for="title" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="title" name="title" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.title}}</textarea>
+      <br>
+      <label for="author" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Author:</label>
+      <textarea id="author" name="author" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.author}}</textarea>
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
-    <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;"></h6>
+      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;"></h6>
       <br>
       <br>
       <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
-      <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;"></textarea>
+      <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;">{{post.body}}</textarea>
       <a href="allPosts.html"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
       <div>
         <button onclick="like()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:13%;top: 90%;">Likes</button>

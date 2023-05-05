@@ -68,10 +68,10 @@
   <body>
     <h1>&nbsp;</h1>
     <h2>Edit Post</h2>
-    <form>
-      <h3>&nbsp;<a href="profile.html">Profile</a></h3><br>
-      <label for="PostTitle" style="position:relative; bottom: 70px; left:65px; font-family: Alata; font-size: 30px;">Title:</label>
-      <textarea id="PostTitle" name="PostTitle" required style="border-width: 3px; font-size: 18px; bottom:30px; position:relative;" rows="1" cols="176"></textarea>
+    <form action = "/post/{{post.post_id}}/edit" method = post>
+      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      <label for="title" style="position:relative; bottom: 70px; left:65px; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="title" name="title" required style="border-width: 3px; font-size: 18px; bottom:30px; position:relative;" rows="1" cols="176">{{post.title}}</textarea>
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: relative; left:65px; bottom: 30px;">Choose your student classification:</label>
@@ -84,7 +84,7 @@
       <br>
       <br>
       <label for="text" style="position:relative; bottom:416px; left:65px; font-family: Alata; font-size: 30px;">Text:</label>
-      <textarea id="text" name="text" rows="16" cols="196" required style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;"></textarea>
+      <textarea id="text" name="text" rows="16" cols="196" required style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;">{{post.body}}</textarea>
       <h4></h4>>
       <input type="submit" value="Submit" style="background-color: #99eeff;border: none;height: 3%; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;left:91%;bottom: 7%;"><br><br><br>
       <a href="allPosts.html"><img src="back.png" style="width: 3%;height: 3%;position: relative;bottom: 830px;"></a>

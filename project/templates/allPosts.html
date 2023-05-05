@@ -10,7 +10,7 @@
     <h2 style= "background-color: #44ccff;height: 6%;position: fixed;top: 6.9%;width: 100%;left: 0%;font-family: 'Alata';font-size:230% ;text-align: center;letter-spacing: 200%;">All Posts</h2>
   </div>
     <form>
-        <a href="profile.html" style="position: fixed;top: 12%;background-color: #99eeff;width: 5%;text-align: center;height: 2.5%;font-size: 100%; font-family: 'Alata';left: 90%;">Profile</a><br><br> <!--Find html/css to make this a header bar-->
+        <a href="/profile" style="position: fixed;top: 12%;background-color: #99eeff;width: 5%;text-align: center;height: 2.5%;font-size: 100%; font-family: 'Alata';left: 90%;">Profile</a><br><br> <!--Find html/css to make this a header bar-->
         <label for="filter" style="position: fixed;top: 11.2%;font-family: 'Alata';left: 5%;font-size: 150%;">Filter:</label>
         <select name="filter" id="filter" style="position: fixed;top: 11.2%;left: 9%; border-width: 3px; font-size: 18px; font-family: Alata" required>
           <option value="Freshman">Freshman</option>
@@ -23,10 +23,24 @@
 
 
         <div style="border-color: black;border-style: solid;width: 97%;position: fixed;left: 1%;top: 20%;">
-        <p style="font-family: 'Alata';" id="postName">Insert Post Title Here &nbsp; &nbsp;
-        <a href="post.html" id="postIdLink">Expand</a></p>
+        <table>
+          <tbody>
+            {% for post in posts %}
+              <tr>
+                <td>
+                  {{post.title}}
+                </td>
+                <td>
+                  {{post.author}}
+                </td>
+                <td>
+                  <a href="/post/{{post.post_id}}">Expand</a></p>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
     </form>
   </body>
-  
 </html>
