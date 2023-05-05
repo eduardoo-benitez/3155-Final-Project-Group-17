@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
     <title>Create Post</title>
+    <style>
+      h1{
+        background-color: #2266ff;
+        height: 100px;
+        position: relative;
+        width: 100%;
+        
+        bottom: 25px;
+      }
+      h2{
+        background-color: #44ccff;
+        height: 60px;
+        position: relative;
+        width: 100%;
+        bottom: 65px;
+        font-size: 48px;
+        font-weight: 600;
+        font-style: normal;
+        font-family: 'Alata';
+        text-align: center;
+        letter-spacing: 9px
+      }
+      h3{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.6%;
+        position: relative;
+        left: 1750px;
+        bottom: 150px;
+      }
+      a{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        letter-spacing: 1px
+      }
+      h4{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.7%;
+        position: relative;
+        left: 1750px;
+        bottom: 20px;
+      }
+      body{
+        border-width: 50px;
+        border-color: grey;
+      }
+      h5{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 550;
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 25px;
+      }
+      
+      
+    </style>
   </head>
   <body>
-    <h1>Create Post</h1>
+    <div>
+      <h1 style="background-color: #2266ff;height: 10%;position: fixed;width: 100%;top: -2.2%;left: 0%;"></h1>
+      <h2 style= "background-color: #44ccff;height: 6%;position: fixed;top: 6.9%;width: 100%;left: 0%;font-family: 'Alata';font-size:230% ;text-align: center;letter-spacing: 200%;">Create Post</h2>
+    </div>
     <form action = "/profile/create" method = post>
-      <a href="/profile">Profile</a>
-      <br><br>
-      
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required>
-      <br><br>
-      
-      <label for="title">Text:</label>
-      <textarea type="text" id="body" name="body" required cols="30" rows="10"></textarea>
-      <br><br>
+      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      <label for="title" style="position:fixed; top: 20%; left:3%; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="title" name="title" required style="border-width: 3px; font-size: 18px; top:25%; position:fixed;left: 3%;" rows="1" cols="176"></textarea>
+      <br>
+      <br>
+      <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:3%; top: 30%;">Choose your student classification:</label>
+    <select name="year" id="year" style="position: fixed; left: 28%; top: 30.5%; border-width: 3px; font-size: 18px; font-family: Alata" required>
+      <option value="Freshman">Freshman</option>
+      <option value="Softmore">Softmore</option>
+      <option value="Junior">Junior</option>
+      <option value="Senior">Senior</option>
+    </select>
+      <br>
+      <br>
+      <label for="text" style="position:fixed; top:37%; left:3%; font-family: Alata; font-size: 30px;">Text:</label>
+      <textarea id="text" name="text" rows="16" cols="196" required style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;left: 3%;top: 42%;"></textarea>
 
-      <input type="submit" value="Submit">
-      <br><br><br>
+      <input type="submit" value="Submit" style="background-color: #99eeff;border: none;height: 3%; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;left:91%;bottom: 7%;"><br><br><br>
+      <a href="profile.html"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
     </form>
   </body>
+  
 </html>

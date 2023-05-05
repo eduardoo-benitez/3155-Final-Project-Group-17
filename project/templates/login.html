@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <h1 style="background-color: #2266ff;width: 40%;position: fixed;right:30%; text-align: center;height: 10%;bottom: 3.5%;"></h1>
+    <h2 style="background-color: #44ccff;width: 40%;position: fixed;right:30%; text-align: center;height: 80%;top: 2.5%;"></h2>
+    <h3 style="font-family: 'Alata';font-size: 50px;position: fixed;left:46%;top: 10%;letter-spacing: 4px;">LOGIN</h3>
     <form action = "/login" method = post>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br><br>
-
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <br><br>
-
-      <label for="passw">Password:</label>
-      <input type="password" id="passw" name="passw" required>
-      <br><br>
+      <label for="email" style="font-family: 'Alata';font-size: 20px;position: fixed;right: 48%;top:30%">Email:</label>
+      <textarea type="email" id="email" name="email" required style="border-width: 2px; font-size: 142%; top:34%; position:fixed; right:35%;" rows="1" cols="50"></textarea><br><br>
+      <label for="username" style="font-family: 'Alata';font-size: 20px;position: fixed;right: 47%;top:39%">Username:</label>
+      <textarea type="text" id="username" name="username" required style="border-width: 2px; font-size: 142%; top:43%; position:fixed; right:35%;" rows="1" cols="50"></textarea><br><br>
+      <label for="passw" style="font-family: 'Alata';font-size: 20px;position: fixed;right: 47.3%;top:48%">Password:</label>
+      <textarea type="password" id="passw" name="passw" required style="border-width: 2px; font-size: 142%; top:52%; position:fixed; right:35%;" rows="1" cols="50"></textarea><br><br>
+      <input type="submit" value="Submit" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:47%;bottom: 35%;"><br><br><br>
       
-      <input type="submit" value="Submit">
-
-      <p>Need To Make an Account?</p>
-      <a href="/">Click Here</a>
+      <p style="font-family: 'Alata'; position: fixed;right: 21%;bottom: 33%;">Need to Make an Account?</p>
+      <a href="/" style="font-family: 'Alata';position: fixed;right: 25.5%;bottom: 32%;">Register</a>
+      <h4 style="background-color: #2266ff;height:10%;position:fixed;width: 50%;bottom: -2.2%;right: 0%;"></h4>
     </form>
   </body>
 </html>

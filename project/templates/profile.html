@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
     <title>Profile</title>
   </head>
   <body>
-    <h1>Profile</h1>
-    <form>        
-        <a href="create">Create</a></p>
-        <a href="/all">All Posts</a> <!--Find html/css to make this a header bar-->
-        <br><br> 
-        <label for="search">Search:</label>
-        <input type="search">
-        <br><br><br>
+    <h1 style="background-color: #2266ff;height: 10%;position: fixed;width: 100%;top: -2.2%;left: 0%;"></h1>
+    <h2 style= "background-color: #44ccff;height: 6%;position: fixed;top: 8%;width: 100%;left: 0%;"></h2>
+    <h3 style="font-family: 'Alata';position: fixed;top: 7%;font-size: 230%;left: 45%;letter-spacing: 9px">Profile</h3>
+    <form>
+        <a href="/all" style="position: fixed;top: 12%;background-color: #99eeff;width: 5%;text-align: center;height: 2.5%;font-size: 100%; font-family: 'Alata';left: 90%;">All Posts</a><br><br> <!--Find html/css to make this a header bar-->
+        <label for="filter" style="position: fixed;top: 11.2%;font-family: 'Alata';left: 5%;font-size: 150%;">Filter:</label>
+        <select name="filter" id="filter" style="position: fixed;top: 11.2%;left: 9%; border-width: 3px; font-size: 18px; font-family: Alata" required>
+          <option value="Freshman">Freshman</option>
+          <option value="Softmore">Softmore</option>
+          <option value="Junior">Junior</option>
+          <option value="Senior">Senior</option>
+        </select>
+        <input type="submit" value="Submit" style="background-color: #99eeff;border: none;height: 2.5%; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;left:16%;top: 12%;"><br><br><br>
 
-        <source media="(min-width:650px)" srcset=""> <!--Put profile image here-->
-        <p>{{user.username}}</p>
-        <br>
+        <img src="undergrad-chat-low-resolution-logo-black-on-white-background.png" style="position: fixed;top: 28%;left: 3%;height: 45%;width: 30%;border-color: black;border-style: solid;"> 
+        <p style="position: fixed;font-family: 'Alata';font-size: 150%; left: 10%;bottom: 20%;" id="profileName">{{user.username}}</p><br>
 
+        <div style="border-color: black;border-style: solid;width: 50%;position: fixed;left: 47%;top: 20%;">
         <table>
           <tbody>
             {% for post in posts %}
@@ -33,7 +39,9 @@
               </tr>
             {% endfor %}
           </tbody>
-        </table>        
+        </table>      
+      </div>
+      <a href="create" style="position: fixed;top: 80%;background-color: #99eeff;width: 4%;text-align: center;height: 2.5%;font-size: 100%; font-family: 'Alata';left: 14%;">Create</a><br><br>
     </form>
   </body>
 </html>

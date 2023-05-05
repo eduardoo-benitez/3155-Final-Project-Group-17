@@ -1,26 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alata'>
     <title>View Post</title>
+    <style>
+      h1{
+        background-color: #2266ff;
+        height: 10%;
+        position: fixed;
+        width: 100%;
+        
+        top: -2.2%;
+      }
+      h2{
+        background-color: #44ccff;
+        height: 7%;
+        position: fixed;
+        width: 100%;
+        top: 5.9%;
+        font-size: 48px;
+        font-weight: 600;
+        font-style: normal;
+        font-family: 'Alata';
+        text-align: center;
+        letter-spacing: 9px
+      }
+      h3{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.6%;
+        position: relative;
+        left: 1750px;
+        bottom: 150px;
+      }
+      a{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        letter-spacing: 1px
+      }
+      h4{
+        background-color: #99eeff;
+        height: 25px;
+        width: 3.7%;
+        position: relative;
+        left: 1750px;
+        bottom: 20px;
+      }
+      body{
+        border-width: 50px;
+        border-color: grey;
+      }
+      h5{
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: 550;
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 25px;
+      }
+      
+      
+    </style>
   </head>
   <body>
-    <a href="/all">All Posts</a>
-    <br><br>
-    <a href="/profile">Profile</a>
-    <br><br>
-    {% if post.author == active.username %}
-      <a href="/post/{{post.post_id}}/edit">Edit post</a>
-      <br><br>
-    {% endif %}
-
-    <h1>{{post.title}}</h1>
-    <h2>{{post.author}}</h2>
-    <p>{{post.body}}</p>
-    <div>
-      <button onclick="like()">Like</button>
-      <span id="likes">0</span>
-      <button onclick="dislike()">Dislike</button>
-      <span id="dislikes">0</span>
-    </div>
+    <h1></h1>
+    <h2>View Post</h2>
+    <form>
+      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      {% if post.author == active.username %}
+        <h3>&nbsp;<a href="/post/{{post.post_id}}/edit">Edit post</a></h3><br><br><br>
+      {% endif %}
+      <label for="title" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
+      <textarea id="title" name="title" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.title}}</textarea>
+      <br>
+      <label for="author" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Author:</label>
+      <textarea id="author" name="author" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.author}}</textarea>
+      <br>
+      <br>
+      <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
+      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;"></h6>
+      <br>
+      <br>
+      <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
+      <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;">{{post.body}}</textarea>
+      <a href="allPosts.html"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
+      <div>
+        <button onclick="like()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:13%;top: 90%;">Likes</button>
+        <span id="likes" style="font-family: Alata;font-size: 125%;position: fixed;left: 88%;top: 90%;">0</span>
+        <button onclick="dislike()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:5%;top: 90%;">Dislikes</button>
+        <span id="dislikes" style="font-family: Alata;font-size: 125%;position: fixed;left: 96%;top: 90%;">0</span>
+      </div>
+    </form>
   </body>
+  
 </html>
