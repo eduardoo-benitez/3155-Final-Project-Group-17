@@ -96,10 +96,11 @@ def edit_form(post_id):
 @app.post('/post/<int:post_id>/edit')
 def edit(post_id):
     title = request.form.get('title')
-    body = request.form.get('body')
+    body = request.form.get('text')
+    tag = request.form.get('year')
     target_post = website_repository_singleton.get_post_by_id(post_id)
 
-    website_repository_singleton.update_post(target_post, title, body)
+    website_repository_singleton.update_post(target_post, title, body, tag)
     return redirect(f'/post/{post_id}')
 
 @app.post('/all/filter')

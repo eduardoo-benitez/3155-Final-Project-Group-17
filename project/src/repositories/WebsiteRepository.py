@@ -59,9 +59,10 @@ class WebsiteRepository:
         db.session.commit()
         return newPost
     
-    def update_post(self, target, title, body):
+    def update_post(self, target, title, body, tag):
         target.title = title
         target.body = body
+        target.tag = tag
         db.session.commit()
         return
 
