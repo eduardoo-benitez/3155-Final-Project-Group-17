@@ -25,14 +25,8 @@
         text-align: center;
         letter-spacing: 9px
       }
-      h3{
-        background-color: #99eeff;
-        height: 25px;
-        width: 3.6%;
-        position: relative;
-        left: 1750px;
-        bottom: 150px;
-      }
+      
+      
       a{
         font-family: 'Alata';
         font-style: normal;
@@ -41,14 +35,7 @@
         position: relative;
         letter-spacing: 1px
       }
-      h4{
-        background-color: #99eeff;
-        height: 25px;
-        width: 3.7%;
-        position: relative;
-        left: 1750px;
-        bottom: 20px;
-      }
+      
       body{
         border-width: 50px;
         border-color: grey;
@@ -69,15 +56,15 @@
     <h1></h1>
     <h2>View Post</h2>
     <form>
-      <h3>&nbsp;<a href="/profile">Profile</a></h3><br>
+      <h3 style="background-color: #99eeff;font-family: Alata;position: fixed;top: 10%;right: 10%;">&nbsp;<a href="/profile">Profile</a></h3><br>
       {% if post.author == active.username %}
-        <h3>&nbsp;<a href="/post/{{post.post_id}}/edit">Edit post</a></h3><br><br><br>
+        <h4 style="position: fixed;top: 88.5%;background-color: #99eeff;right: 20%;">&nbsp;<a href="/post/{{post.post_id}}/edit">Edit Post</a></h4><br><br><br>
       {% endif %}
       <label for="title" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
       <textarea id="title" name="title" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.title}}</textarea>
       <br>
-      <label for="author" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Author:</label>
-      <textarea id="author" name="author" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.author}}</textarea>
+      <label for="author" style="position:fixed; top: 35%; left:30%; font-family: Alata; font-size: 30px;">Author:</label>
+      <textarea id="author" name="author" style="border-width: 3px; font-size: 18px; top:36%;left: 36%; position:fixed;" rows="1" cols="100" disabled>{{post.author}}</textarea>
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
