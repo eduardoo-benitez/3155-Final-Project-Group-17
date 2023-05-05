@@ -25,8 +25,6 @@
         text-align: center;
         letter-spacing: 9px
       }
-      
-      
       a{
         font-family: 'Alata';
         font-style: normal;
@@ -55,10 +53,9 @@
   <body>
     <h1></h1>
     <h2>View Post</h2>
-    <form>
       <h3 style="background-color: #99eeff;font-family: Alata;position: fixed;top: 10%;right: 10%;">&nbsp;<a href="/profile">Profile</a></h3><br>
       {% if post.author == active.username %}
-        <h4 style="position: fixed;top: 88.5%;background-color: #99eeff;right: 20%;">&nbsp;<a href="/post/{{post.post_id}}/edit">Edit Post</a></h4><br><br><br>
+        <h3>&nbsp;<a style = "background-color: #99eeff;font-family: Alata;position: fixed;top: 10%;right: 30%;" href="/post/{{post.post_id}}/edit">Edit</a></h3><br>
       {% endif %}
       <label for="title" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
       <textarea id="title" name="title" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.title}}</textarea>
@@ -74,7 +71,6 @@
       <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
       <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;">{{post.body}}</textarea>
       <a href="/all"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
-    </form>
   </body>
   
 </html>
