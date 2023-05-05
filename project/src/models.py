@@ -17,4 +17,6 @@ class posts(db.Model):
     body = db.Column(db.Text, nullable = False)
     author = db.Column(db.String(20), ForeignKey(users.username), nullable = False)
 
+    tag = db.Column(db.String(20))
+
     post_id = db.Column(db.Integer, autoincrement = True, primary_key = True, nullable = False)

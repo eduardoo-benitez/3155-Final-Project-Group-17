@@ -71,8 +71,9 @@ def create_post():
     title = request.form.get('title')
     body = request.form.get('body')
     author = website_repository_singleton.find_active_user()
+    tag = request.form.get('year')
 
-    created_post = website_repository_singleton.create_post(title, body, author.username)
+    created_post = website_repository_singleton.create_post(title, body, author.username, tag)
     return redirect(f'/post/{created_post.post_id}')
 
 @app.get('/post/<int:post_id>')
@@ -100,4 +101,10 @@ def edit(post_id):
 
     website_repository_singleton.update_post(target_post, title, body)
     return redirect(f'/post/{post_id}')
+
+@app.post('/all/filter')
+def filter():
+    filter = request.form.get('filter')
+    filtered_posts = website_repository_singleton.filter_by_tag(filter)
+    return render_template('allPosts.html', posts = filtered_posts)
 

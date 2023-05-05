@@ -81,18 +81,12 @@
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
-      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;"></h6>
+      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;">{{post.tag}}</h6>
       <br>
       <br>
       <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
       <textarea id="text" name="text" rows="16" cols="196" disabled style="border-width: 3px; font-size: 18px; font-family:Alata, Alata Placeholder, sans-serif;position: fixed;top:45%;left: 4%;">{{post.body}}</textarea>
-      <a href="allPosts.html"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
-      <div>
-        <button onclick="like()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:13%;top: 90%;">Likes</button>
-        <span id="likes" style="font-family: Alata;font-size: 125%;position: fixed;left: 88%;top: 90%;">0</span>
-        <button onclick="dislike()" style="background-color: #99eeff;border: none;height: 30px; width: 5%;font-family: 'Alata';font-size: 100%;position: fixed;right:5%;top: 90%;">Dislikes</button>
-        <span id="dislikes" style="font-family: Alata;font-size: 125%;position: fixed;left: 96%;top: 90%;">0</span>
-      </div>
+      <a href="/all"><img src="back.png" style="width: 3%;height: 5%;position: fixed;top: 10.5%;left: 3%;"></a>
     </form>
   </body>
   

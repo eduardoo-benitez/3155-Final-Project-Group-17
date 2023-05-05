@@ -53,8 +53,8 @@ class WebsiteRepository:
         activePosts = posts.query.filter(posts.author.like(activeUser)).all()
         return activePosts
     
-    def create_post(self, title, body, author):
-        newPost = posts(title = title, body = body, author = author)
+    def create_post(self, title, body, author, tag):
+        newPost = posts(title = title, body = body, author = author, tag = tag)
         db.session.add(newPost)
         db.session.commit()
         return newPost
@@ -64,5 +64,9 @@ class WebsiteRepository:
         target.body = body
         db.session.commit()
         return
+
+    def filter_by_tag(self, tag):
+        return posts.query.filter_by(tag = tag)
+
 
 website_repository_singleton = WebsiteRepository()

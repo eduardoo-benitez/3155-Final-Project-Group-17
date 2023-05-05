@@ -21,5 +21,7 @@ CREATE TABLE posts (
     body TEXT NOT NULL,
     author VARCHAR(20) NOT NULL, FOREIGN KEY(author) REFERENCES users(username),
     
+    tag VARCHAR(20),
+
     post_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
 );
