@@ -55,7 +55,7 @@
     <h2>View Post</h2>
       <h3 style="background-color: #99eeff;font-family: Alata;position: fixed;top: 10%;right: 10%;">&nbsp;<a href="/profile">Profile</a></h3><br>
       {% if post.author == active.username %}
-        <h3>&nbsp;<a style = "background-color: #99eeff;font-family: Alata;position: fixed;top: 10%;right: 30%;" href="/post/{{post.post_id}}/edit">Edit</a></h3><br>
+        <h3>&nbsp;<a style = "background-color: #99eeff;font-family: Alata;position: fixed;top: 12%;right: 15%;" href="/post/{{post.post_id}}/edit">Edit</a></h3><br>
       {% endif %}
       <label for="title" style="position:fixed; top: 25%; left:4%; font-family: Alata; font-size: 30px;">Title:</label>
       <textarea id="title" name="title" style="border-width: 3px; font-size: 18px; top:30%;left: 4%; position:fixed;" rows="1" cols="176" disabled>{{post.title}}</textarea>
@@ -65,7 +65,7 @@
       <br>
       <br>
       <label for="year" style="font-family: Alata; font-size: 30px; position: fixed; left:4%; top: 35%;">Student Classification:</label>
-      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:21%;bottom: 53%;">{{post.tag}}</h6>
+      <h6 name="year" id="year" style="border-width: 3px; font-size: 30px; font-family: Alata;border-color: black;width: 100%;position:fixed;left:20%;bottom: 53.5%;">{{post.tag}}</h6>
       <br>
       <br>
       <label for="text" style="position:fixed; top:40%; left:4%; font-family: Alata; font-size: 30px;">Text:</label>
